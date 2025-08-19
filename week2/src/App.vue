@@ -1,18 +1,10 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import JSON from './components/JSON.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import Form from './components/Form.vue'
 </script>
 
 <template>
   <Form />
-  </header>
-
-  <main>
-    <TheWelcome />
-    <JSON />
-  </main>
 </template>
 
 <style scoped>
