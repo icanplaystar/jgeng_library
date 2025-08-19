@@ -59,7 +59,7 @@
               class="form-control"
               id="reason"
               rows="3"
-              v-model="formData.reason"
+              maxlength="200" v-model="formData.reason"
             ></textarea>
           </div>
 
