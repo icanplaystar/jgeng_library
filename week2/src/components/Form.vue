@@ -20,7 +20,7 @@
                 type="password"
                 class="form-control"
                 id="password"
-                v-model="formData.password"
+                minlength="4" maxlength="10" v-model="formData.password"
               />
             </div>
           </div>
