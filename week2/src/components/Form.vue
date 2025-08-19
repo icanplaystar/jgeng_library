@@ -11,7 +11,7 @@
                 type="text"
                 class="form-control"
                 id="username"
-                required v-model="formData.username"
+                v-model="formData.username"
               />
             </div>
             <div class="col-md-6">
@@ -20,22 +20,24 @@
                 type="password"
                 class="form-control"
                 id="password"
-                minlength="4" maxlength="10" v-model="formData.password"
+                v-model="formData.password"
               />
             </div>
           </div>
 
           <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
               <div class="form-check">
                 <input
                   type="checkbox"
                   class="form-check-input"
                   id="isAustralian"
                   v-model="formData.isAustralian"
-                  :required="true"
+                  required
                 />
-                <label class="form-check-label" for="isAustralian">Australian Resident?</label>
+                <label class="form-check-label" for="isAustralian">
+                  Australian Resident?
+                </label>
               </div>
             </div>
 
@@ -59,7 +61,9 @@
               class="form-control"
               id="reason"
               rows="3"
-              maxlength="200" v-model="formData.reason"
+              v-model="formData.reason"
+              required
+              minlength="10"
             ></textarea>
           </div>
 
