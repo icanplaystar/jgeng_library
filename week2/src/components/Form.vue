@@ -11,7 +11,7 @@
                 type="text"
                 class="form-control"
                 id="username"
-                v-model="formData.username"
+                required v-model="formData.username"
               />
             </div>
             <div class="col-md-6">
