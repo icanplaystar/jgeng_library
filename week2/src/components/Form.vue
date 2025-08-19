@@ -29,13 +29,13 @@
             <div class="col-md-6">
               <div class="form-check">
                 <input
-  type="checkbox"
-  class="form-check-input"
-  id="isAustralian"
-  v-model="formData.isAustralian"
-  :required="true"
-/>
-<label class="form-check-label" for="isAustralian">Australian Resident?</label>
+                  type="checkbox"
+                  class="form-check-input"
+                  id="isAustralian"
+                  v-model="formData.isAustralian"
+                  :required="true"
+                />
+                <label class="form-check-label" for="isAustralian">Australian Resident?</label>
               </div>
             </div>
 
