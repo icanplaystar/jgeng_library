@@ -11,8 +11,11 @@
                 type="text"
                 class="form-control"
                 id="username"
+                @blur="() => validateName(true)"
+                @input="() => validateName(false)"
                 v-model="formData.username"
               />
+              <div v-if="errors.username" class="text-danger">{{ errors.username }}</div>
             </div>
             <div class="col-md-6">
               <label for="password" class="form-label">Password</label>
@@ -103,21 +106,51 @@
 import { ref } from 'vue';
 
 const formData = ref({
-    username: '',
-    password: '',
-    isAustralian: false,
-    reason: '',
-    gender: ''
+  username: '',
+  password: '',
+  isAustralian: false,
+  reason: '',
+  gender: ''
 });
 
 const submittedCards = ref([]);
 
 const submitForm = () => {
-    submittedCards.value.push({
-        ...formData.value
-    });
+  validateName(true);
+  if (!errors.value.username) {
+    submittedCards.value.push({ ...formData.value });
+    clearForm();
+  }
 };
+
+const clearForm = () => {
+  formData.value = {
+    username: '',
+    password: '',
+    isAustralian: false,
+    reason: '',
+    gender: ''
+  };
+};
+
+const errors = ref({
+  username: null,
+  password: null,
+  resident: null,
+  gender: null,
+  reason: null,
+});
+
+const validateName = (blur) => {
+  if (formData.value.username.length < 3) {
+    if (blur) errors.value.username = "Name must be at least 3 characters";
+  } else {
+    errors.value.username = null;
+  }
+};
+
 </script>
+
 
 
 
