@@ -33,7 +33,6 @@
                   class="form-check-input"
                   id="isAustralian"
                   v-model="formData.isAustralian"
-                  required
                 />
                 <label class="form-check-label" for="isAustralian">
                   Australian Resident?
@@ -62,8 +61,6 @@
               id="reason"
               rows="3"
               v-model="formData.reason"
-              required
-              minlength="10"
             ></textarea>
           </div>
 
